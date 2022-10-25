@@ -1,12 +1,9 @@
 # final-work
 
-For the API token, create .env file and put this inside :
+First, put your API token in .env file.
 
-```python
-export GITHUB_TOKEN=thisismyAPItoken
-```
 
-In python file you need to import os library :
+Then, in python file, you need to import os library :
 ```python
 import os
 ```
