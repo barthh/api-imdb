@@ -1,6 +1,14 @@
 # final-work
 
 First, put your API token in .env file.
+```python
+export API_token=thisismyAPItoken
+```
+
+Install a module :
+```bash
+pip install python-dotenv
+```
 
 
 Then, in python file, you need to import os library :
@@ -10,5 +18,5 @@ import os
 
 And get the token like this :
 ```python
-github_token = os.environ["GITHUB_TOKEN"]
+api_token = os.environ["API_token"]
 ```
