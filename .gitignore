@@ -1,2 +1,5 @@
 .DS_STORE
 .env
+.pytest_cache
+__pycache__
+package/__pycache__
