@@ -37,4 +37,9 @@ How To Use This
     ```
 1. Navigate to http://127.0.0.1:5000/ in your browser
 
-/!\  The token allows 100 requests each day
+Other
+---------------
+
+The token allows 100 requests each day
+
+This README isn't finished
