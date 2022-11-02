@@ -2,6 +2,7 @@
 [![Dimitri][linkedin-dimitri-shield]][linkedin-dimitri-url]
 [![Barth][linkedin-barthh-shield]][linkedin-barthh-url]
 
+
 Expliquer le but du projet
 Maximum de 100 requetes par jour /!\
 Expliquer la partie package
@@ -87,8 +88,11 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [IMDb API website](https://imdb-api.com){:target="_blank"}
+1. Get a free API Key at [IMDb API website](https://imdb-api.com)
 
+<a href="http://www.google.com" target="_blank">
+  test
+</a>
 
 2. Clone the repository
    ```sh
