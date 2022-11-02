@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<link href="{{ url_for('static', filename='css/search_menu.css') }}" rel="stylesheet">
+
+<div class = "elements">
+  <form method="POST">
+    <input type="text" name="movie_title" placeholder="Search a movie...">
+    <input type="submit" value="Find">
+  </form>
+</div>
+
+<div>
+  {% block container2 %}
+  {% endblock %}  
+</div>
+
+{% endblock %}

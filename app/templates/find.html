@@ -1,0 +1,21 @@
+{% extends 'search_menu.html' %}
+
+{% block container2 %}
+
+  <link href="{{ url_for('static', filename='css/find.css') }}" rel="stylesheet">
+    {% for movie in movies %}
+      <div class="elements">
+        <h2>
+          <a class = "title" href="{{ url_for('moviefinder.movie_info', key = movie.id) }}">{{ movie.title }}</a>          
+          <small>{{ movie.description }}</small>
+        </h2>
+      </div>
+    {% endfor %}
+    {% if message %}
+      <div class="elements">
+        <p class = "messages">
+          {{ message }}
+        </p>
+      </div>
+    {% endif %}
+{% endblock %}

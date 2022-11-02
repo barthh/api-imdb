@@ -1,2 +1,3 @@
 from package.versioning_event_facade import VersioningEventFacade
-from package.versioning_event import VersioningEvent
+from package.rating_event import RatingEvent
+from package.movies_event import MoviesEvent

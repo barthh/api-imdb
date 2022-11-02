@@ -1,0 +1,12 @@
+.title {
+    margin-bottom: 15px;
+}
+
+.inline {
+    display: inline-block;
+    font-size: 20px;
+}
+
+#rating {
+    color: #295b87;
+}
