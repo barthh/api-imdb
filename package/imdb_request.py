@@ -15,7 +15,7 @@ class IMDBRequest:
     def search_rating(cls, movie_id:str):
         # if(cls._local_mode):
         #     # Opening local JSON file
-        #     f = open('./package/request6.json', "r")
+        #     f = open('./package/local_jsons/request6.json', "r")
         #     print("Get local json for rating")
         #     response = json.load(f)
         #     f.close()
@@ -35,7 +35,7 @@ class IMDBRequest:
     def search_movies(cls, movie:str):
         # if(cls._local_mode):
         #     # Opening local JSON file
-        #     f = open('./package/request5.json', "r")
+        #     f = open('./package/local_jsons/request5.json', "r")
         #     print("Get local json for movies")
         #     response = json.load(f)
         #     f.close()
