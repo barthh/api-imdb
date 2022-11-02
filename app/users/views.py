@@ -4,7 +4,6 @@ from flask import redirect
 from flask import url_for
 from flask import abort
 from flask import Blueprint
-from app.users.models import PRODUCTS
 import package
 
 movie_app = Blueprint('moviefinder', __name__)
