@@ -36,3 +36,5 @@ How To Use This
     python app.py
     ```
 1. Navigate to http://127.0.0.1:5000/ in your browser
+
+/!\  The token allows 100 requests each day
