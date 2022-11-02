@@ -1,7 +1,11 @@
 # main.py
 import package
 
+"""
 
+    This file is useless now
+
+"""
 
 # versioning_events = package.VersioningEventFacade.get_movie_ratings("leon the professional")
 # print(versioning_events)
