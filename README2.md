@@ -2,6 +2,11 @@
 [![Dimitri][linkedin-dimitri-shield]][linkedin-dimitri-url]
 [![Barth][linkedin-barthh-shield]][linkedin-barthh-url]
 
+<a href="https://linkstoothersite.com" target="_bank">Links to other site</a>
+
+<a href="linkstoownsite.html" target="self">Links to own site</a>
+
+
 
 Expliquer le but du projet
 Maximum de 100 requetes par jour /!\
@@ -89,10 +94,6 @@ This is an example of how to list things you need to use the software and how to
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Get a free API Key at [IMDb API website](https://imdb-api.com)
-
-<a href="http://www.google.com" target="_blank">
-  test
-</a>
 
 2. Clone the repository
    ```sh
