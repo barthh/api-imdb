@@ -13,15 +13,15 @@ class IMDBRequest:
 
     @classmethod
     def search_rating(cls, movie_id:str):
-        if(cls._local_mode):
-            # Opening local JSON file
-            f = open('./package/request6.json', "r")
-            print("Get local json for rating")
-            response = json.load(f)
-            f.close()
-            return Response(status_code = "json loaded", content = response)
+        # if(cls._local_mode):
+        #     # Opening local JSON file
+        #     f = open('./package/request6.json', "r")
+        #     print("Get local json for rating")
+        #     response = json.load(f)
+        #     f.close()
+        #     return Response(status_code = "json loaded", content = response)
         
-        else:
+        # else:
             response = requests.get(
                 cls._base_url
                 + "Ratings/"
@@ -33,15 +33,15 @@ class IMDBRequest:
         
     @classmethod
     def search_movies(cls, movie:str):
-        if(cls._local_mode):
-            # Opening local JSON file
-            f = open('./package/request5.json', "r")
-            print("Get local json for movies")
-            response = json.load(f)
-            f.close()
-            return Response(status_code = "json loaded", content = response['results'])
+        # if(cls._local_mode):
+        #     # Opening local JSON file
+        #     f = open('./package/request5.json', "r")
+        #     print("Get local json for movies")
+        #     response = json.load(f)
+        #     f.close()
+        #     return Response(status_code = "json loaded", content = response['results'])
 
-        else:
+        # else:
             print("Request for movies")
             response =  requests.get(
                 cls._base_url
