@@ -6,17 +6,12 @@ import package
 # versioning_events = package.VersioningEventFacade.get_movie_ratings("leon the professional")
 # print(versioning_events)
 
-# versioning_events = package.VersioningEventFacade.get_movies("inception")
-# # for versioning_event in versioning_events:
-# #     assert isinstance(versioning_event, package.VersioningEvent)
-# # print(versioning_events)
+versioning_events = package.VersioningEventFacade.get_movies("inception")
 
-# for versioning_event in versioning_events:
-#     print(versioning_event.id, versioning_event.title, versioning_event.description)
+id = versioning_events[0].id
+print("Movie selected :", versioning_events[0].title)
+print("His ID :", id)
 
-
-versioning_events = package.VersioningEventFacade.get_rating("inception")
-
-print(versioning_events.fullTitle, versioning_events.rating)
-# print("ok")
-# I cant now work with Python Objects
+versioning_events = package.VersioningEventFacade.get_rating(id)
+print("Title :",versioning_events.fullTitle)
+print("Rating :",versioning_events.rating)
