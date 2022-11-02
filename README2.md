@@ -2,11 +2,6 @@
 [![Dimitri][linkedin-dimitri-shield]][linkedin-dimitri-url]
 [![Barth][linkedin-barthh-shield]][linkedin-barthh-url]
 
-<a href="https://linkstoothersite.com" target="_bank">Links to other site</a>
-
-<a href="linkstoownsite.html" target="self">Links to own site</a>
-
-
 
 Expliquer le but du projet
 Maximum de 100 requetes par jour /!\
