@@ -2,4 +2,4 @@
 .env
 .pytest_cache
 __pycache__
-package/__pycache__
+__init__.pyc
