@@ -89,6 +89,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Get a free API Key at [IMDb API website](https://imdb-api.com){:target="_blank"}
 
+
 2. Clone the repository
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
