@@ -4,8 +4,9 @@ from dotenv import load_dotenv
 import json
 
 class IMDBRequest:
+    
     load_dotenv()
-    token = os.getenv("API_token")
+    _token = os.getenv("API_token")
     _base_url = "https://imdb-api.com/en/API/"
 
     # Use local json requests
@@ -20,12 +21,11 @@ class IMDBRequest:
         #     response = json.load(f)
         #     f.close()
         #     return Response(status_code = "json loaded", content = response)
-        
         # else:
             response = requests.get(
                 cls._base_url
                 + "Ratings/"
-                + cls.token 
+                + cls._token 
                 + "/" 
                 + movie_id
                 )
@@ -40,13 +40,11 @@ class IMDBRequest:
         #     response = json.load(f)
         #     f.close()
         #     return Response(status_code = "json loaded", content = response['results'])
-
         # else:
-            print("Request for movies")
             response =  requests.get(
                 cls._base_url
                 + "SearchMovie/"
-                + cls.token
+                + cls._token
                 + "/"
                 + movie
             )
