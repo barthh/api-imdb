@@ -3,7 +3,6 @@ input {
     border-radius: 5px;
     height: 50px;
 }
-
 input[type=text], select {
     width: 60%;
     padding-left: 20px;
@@ -11,7 +10,6 @@ input[type=text], select {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
 input[type=submit] {
     width: 10%;
     background-color: #428bca;
@@ -20,7 +18,6 @@ input[type=submit] {
     border: none;
     cursor: pointer;
 }
-
 input[type=submit]:hover {
     background-color: #1f619b;
 }

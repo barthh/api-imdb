@@ -1,8 +1,5 @@
 body {
-  /* padding-top: 50px; */
   margin: 0;
-  /* background-color: red;
-  border: solid; */
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .navbar {
@@ -26,7 +23,6 @@ div.navbar_link a:hover {
   text-align: center;
   margin: 0;
   padding: 40px 150px 10px 150px;
-  /* background-color: #fff; */
 }
 
 .elements {

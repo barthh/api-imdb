@@ -8,22 +8,21 @@ class IMDBRequest:
     token = os.getenv("API_token")
     _base_url = "https://imdb-api.com/en/API/"
 
-    _local_mode = True
+    # Use local json requests
+    _local_mode = False
 
     @classmethod
     def search_rating(cls, movie_id:str):
         if(cls._local_mode):
-            print("Get local json for rating")
-            # Opening JSON file
+            # Opening local JSON file
             f = open('./package/request6.json', "r")
-            # returns JSON object as a dictionary
+            print("Get local json for rating")
             response = json.load(f)
-            # Closing file
             f.close()
             return Response(status_code = "json loaded", content = response)
         
         else:
-            response =  requests.get(
+            response = requests.get(
                 cls._base_url
                 + "Ratings/"
                 + cls.token 
@@ -35,12 +34,10 @@ class IMDBRequest:
     @classmethod
     def search_movies(cls, movie:str):
         if(cls._local_mode):
-            print("Get local json for movies")
-            # Opening JSON file
+            # Opening local JSON file
             f = open('./package/request5.json', "r")
-            # returns JSON object as a dictionary
+            print("Get local json for movies")
             response = json.load(f)
-            # Closing file
             f.close()
             return Response(status_code = "json loaded", content = response['results'])
 
@@ -60,13 +57,3 @@ class Response:
     def __init__(self, status_code, content):
         self.status_code = status_code
         self.content = content
-
-
-# test = IMDBRequest.search_movies("Hunger")
-# print(test.status_code)
-# print(test.content)
-# print(test.content)
-
-# for i in test.content:
-#     test2 = IMDBRequest.search_movie_rating(i['id'])
-#     print(test2.content['imDb'])

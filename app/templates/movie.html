@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block container %}
-<link href="{{ url_for('static', filename='css/movie.css') }}" rel="stylesheet">
 
-  <div class="elements">
+<link href = "{{ url_for('static', filename = 'css/movie.css') }}" rel = "stylesheet">
+
+  <div class = "elements">
 
     {% if message %}
       <p class = "messages">
@@ -11,10 +12,10 @@
       </p>
     {% else %}
       <div class = "title">{{ movie.fullTitle }}</div>
-      <div class="inline">IMDb rating :</div>
-      <div class="inline" id = "rating"><b>{{ movie.rating }}</b></div>
+      <div class = "inline">IMDb rating :</div>
+      <div class = "inline" id = "rating"><b>{{ movie.rating }}</b></div>
     {% endif %}
 
   </div>
-
+  
 {% endblock %}
