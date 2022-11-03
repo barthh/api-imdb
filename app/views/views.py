@@ -40,7 +40,6 @@ def movie_list(key = None):
 def movie_info(key = None):
     if not key:
         abort(404)
-
     movie = package.VersioningEventFacade.get_rating(key)
     if not (movie.fullTitle):
         return render_template('movie.html', message = "Movie not found")
