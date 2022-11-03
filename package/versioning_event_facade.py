@@ -6,6 +6,14 @@ class VersioningEventFacade:
 
     @staticmethod
     def get_rating(id:str) -> [RatingEvent]:
+        """Get the IMDb rating of a specific movie.
+
+        Input:
+        - id: the movie id.
+
+        Onput:
+        - An object.
+        """
         event = IMDBRequest.search_rating(id).content
         versioning_event = RatingEvent(
             title = event["title"],
@@ -17,6 +25,14 @@ class VersioningEventFacade:
 
     @staticmethod
     def get_movies(movie:str) -> [MoviesEvent]:
+        """Get movies related to a research.
+
+        Input:
+        - movie: a string containing the user search.
+
+        Onput:
+        - A list of objects. 
+        """
         events = IMDBRequest.search_movies(movie).content
         versioning_events = []
         for event in events:
