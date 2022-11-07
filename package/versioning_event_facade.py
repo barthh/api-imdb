@@ -18,6 +18,10 @@ class VersioningEventFacade:
     @staticmethod
     def get_movies(movie:str) -> [MoviesEvent]:
         events = IMDBRequest.search_movies(movie).content
+
+        if events is None :
+            return None 
+            
         versioning_events = []
         for event in events:
             versioning_event = MoviesEvent(
