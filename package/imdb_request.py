@@ -2,6 +2,8 @@ import requests
 import os
 from dotenv import load_dotenv
 import json
+from package.response import Response
+
 
 class IMDBRequest:
     
@@ -49,9 +51,3 @@ class IMDBRequest:
                 + movie
             )
             return Response(status_code = response.status_code, content = response.json()['results'])
-        
-
-class Response:
-    def __init__(self, status_code, content):
-        self.status_code = status_code
-        self.content = content

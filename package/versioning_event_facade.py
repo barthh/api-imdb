@@ -34,6 +34,10 @@ class VersioningEventFacade:
         - A list of objects. 
         """
         events = IMDBRequest.search_movies(movie).content
+
+        if events is None :
+            return None 
+            
         versioning_events = []
         for event in events:
             versioning_event = MoviesEvent(
