@@ -10,6 +10,7 @@ How To Use This
 1. Clone the repository :
     ```
     https://github.com/barthh/api-imdb.git
+    cd api-imdb
     ```
 1. Put your API token in a ```.env``` file :
     ```sh
@@ -17,7 +18,8 @@ How To Use This
     ```
 1. Create a virtual environment :
     ```python
-    python3 -m venv .venv
+    cd my_project_folder
+    virtualenv venv
     ```
     > If you miss the module :
     >```python
@@ -25,7 +27,7 @@ How To Use This
     >```
     And activate the environment
     ```sh
-    source .venv/bin/activate
+    source venv/bin/activate
     ```
 1. Install modules :
     ```python
