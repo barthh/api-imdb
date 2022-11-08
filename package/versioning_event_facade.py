@@ -1,7 +1,7 @@
-from package.imdb_requests import IMDBRequest
-from package.imdb_movies_event import MoviesEvent
-from package.imdb_ratings_event import RatingEvent
-from package.imdb_series_event import SeriesEvent
+from .imdb_requests import IMDBRequest
+from .imdb_movies_event import MoviesEvent
+from .imdb_ratings_event import RatingEvent
+from .imdb_series_event import SeriesEvent
 class VersioningEventFacade:
 
     @staticmethod

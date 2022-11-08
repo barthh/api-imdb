@@ -1,12 +1,12 @@
-{% extends 'search_menu.html' %}
+{% extends 'search_bar.html' %}
 
 {% block container2 %}
 
-  <link href = "{{ url_for('static', filename = 'css/find.css') }}" rel = "stylesheet">
+  <link href = "{{ url_for('static', filename = 'css/search_results.css') }}" rel = "stylesheet">
     {% for movie in movies %}
       <div class = "elements">
         <h2>
-          <a class = "title" href = "{{ url_for('moviefinder.movie_info', key = movie.id) }}">{{ movie.title }}</a>          
+          <a class = "title" href = "{{ url_for('information.information', key = movie.id) }}">{{ movie.title }}</a>          
           <small>{{ movie.description }}</small>
         </h2>
       </div>

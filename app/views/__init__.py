@@ -1,2 +1,3 @@
-from flask import Blueprint
-movie_app = Blueprint('moviefinder', __name__)
+from .home import home_app
+from .information import information_app
+from .search import search_app

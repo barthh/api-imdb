@@ -2,7 +2,7 @@ import requests
 import os
 from dotenv import load_dotenv
 import json
-from package.response import Response
+from .response import Response
 
 
 class IMDBRequest:
