@@ -1,7 +1,7 @@
-from package.imdb_request import IMDBRequest
-from package.movies_event import MoviesEvent
-from package.rating_event import RatingEvent
-
+from package.imdb_requests import IMDBRequest
+from package.imdb_movies_event import MoviesEvent
+from package.imdb_ratings_event import RatingEvent
+from package.imdb_series_event import SeriesEvent
 class VersioningEventFacade:
 
     @staticmethod
@@ -34,6 +34,32 @@ class VersioningEventFacade:
         - A list of objects. 
         """
         events = IMDBRequest.search_movies(movie).content
+
+        if events is None :
+            return None 
+            
+        versioning_events = []
+        for event in events:
+            versioning_event = MoviesEvent(
+                id = event['id'],
+                title = event['title'],
+                description = event['description'],
+                )
+            versioning_events.append(versioning_event)
+        return versioning_events
+
+
+    @staticmethod
+    def get_series(serie:str) -> [SeriesEvent]:
+        """Get series related to a research.
+
+        Input:
+        - serie: a string containing the user search.
+
+        Onput:
+        - A list of objects. 
+        """
+        events = IMDBRequest.search_movies(serie).content
 
         if events is None :
             return None 
