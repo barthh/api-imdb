@@ -18,24 +18,16 @@ How To Use This
     ```
 1. Create a virtual environment :
     ```python
-    cd my_project_folder
-    virtualenv venv
+    pipenv install
     ```
     > If you miss the module :
     >```python
-    >pip install virtualenv
+    >pip install pipenv
     >```
-    And activate the environment
-    ```sh
-    source venv/bin/activate
-    ```
-1. Install modules :
-    ```python
-    pip install -r requirements.txt
-    ```
+
 1. Run the app :
     ```python
-    python app.py
+    pipenv run python3 app.py
     ```
 1. Navigate to http://127.0.0.1:5000/ in your browser
 
