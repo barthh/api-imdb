@@ -22,7 +22,9 @@ def home_post(key = None):
 def movie_list(key = None):
     if not key:
         return render_template('search_results.html', message = "Please type something to search")
-    movies = VersioningEventFacade.get_movies(key)
-    if not movies:
+    results = VersioningEventFacade.search_movies(key)
+
+    if not results:
         return render_template('search_results.html', message = "No movies matches your search")
-    return render_template('search_results.html', movies = movies)
+
+    return render_template('search_results.html', results = results, search = key)
