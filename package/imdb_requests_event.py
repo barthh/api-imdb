@@ -24,7 +24,27 @@ class IMDBRequest:
                 + movie_id
                 )
             return Response(status_code = response.status_code, content = response.json())
-    
+
+    # Search lots of informations for a specific id
+    @classmethod
+    def title_advanced(cls, movie_id:str):
+        if(cls._local_mode):
+            # Opening local JSON file
+            f = open('./package/local_jsons/requests_basic/Advanced_search.json', "r")
+            response = json.load(f)
+            f.close()
+            return Response(status_code = "json loaded",content = response['results'])
+        else:
+            response =  requests.get(
+                cls._base_url
+                + "Title/"
+                + cls._token
+                + "/"
+                + movie_id
+                + "/Ratings,"
+            )
+            return Response(status_code = response.status_code, content = response.json()['results'])
+
     # Search for movies only
     @classmethod
     def search_movies(cls, movie:str):
@@ -52,13 +72,6 @@ class IMDBRequest:
     # Search for main result for a search (Main titles, actores, company, keywords...)
     @classmethod
     def search_all(cls, serie:str):
-        if(cls._local_mode):
-            # Opening local JSON file
-            f = open('./package/local_jsons/requests/request_search_all_inception.json', "r")
-            response = json.load(f)
-            f.close()
-            return Response(status_code = "json loaded",content = response['results'])
-        else:
             response =  requests.get(
                 cls._base_url
                 + "SearchAll/"

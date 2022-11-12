@@ -4,6 +4,7 @@ from .imdb_search_movies import SearchMoviesEvent
 from .imdb_search_series import SearchSeriesEvent
 from .imdb_search_all import SearchAllEvent
 
+from .imdb_info_advanced import AdvancedEvent
 from .imdb_info_ratings import RatingsEvent
 
 class VersioningEventFacade:
@@ -21,6 +22,26 @@ class VersioningEventFacade:
         event = IMDBRequest.title_ratings(id).content
 
         versioning_event = RatingsEvent(
+            title = event["title"],
+            fullTitle = event["fullTitle"],
+            rating = event["imDb"],
+            errorMessage = event["errorMessage"],
+            )
+        return versioning_event
+
+    @staticmethod
+    def title_advanced(id:str) -> [AdvancedEvent]:
+        """Get the IMDb informations of a specific title.
+
+        Input:
+        - id: the movie id.
+
+        Onput:
+        - An object.
+        """
+        event = IMDBRequest.title_advanced(id).content
+
+        versioning_event = AdvancedEvent(
             title = event["title"],
             fullTitle = event["fullTitle"],
             rating = event["imDb"],
