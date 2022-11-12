@@ -29,3 +29,11 @@
 .sub_elements .title {
     margin-left: 20px;
 }
+
+.search_message {
+    /* color: #152b3f; */
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }

@@ -9,8 +9,16 @@
 
       <div class = "elements">
         {% for result in results %}
-        <div class= "sub_elements {{'odd' if(loop.index)%2 == 0 }}" >
-          <img src="{{ result.image }}">
+        <div class= "sub_elements {{'odd' if(loop.index)%2 == 0 }}">
+          
+          <a href = "{{ url_for('information.information', key = result.id) }}">
+            {% if result.image %}
+              <img src="{{ result.image }}">
+            {% else %}
+            <img src= "{{url_for('static', filename='images/empty_cover.png')}}" />
+            {% endif %}
+          </a>
+          
           <a class = "title" href = "{{ url_for('information.information', key = result.id) }}">{{ result.title }}</a>          
           <small>{{ result.description }}</small>
         </div>
