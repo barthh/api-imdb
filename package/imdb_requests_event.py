@@ -41,7 +41,7 @@ class IMDBRequest:
     def title_advanced(cls, movie_id:str):
         if(cls._local_mode):
             response = cls._get_local_json("title_advanced")
-            return Response(status_code = "json loaded", content = response['results'], errorMessage = "")
+            return Response(status_code = "json loaded", content = response, errorMessage = "")
         else:
             response =  requests.get(
                 cls._base_url
@@ -51,7 +51,7 @@ class IMDBRequest:
                 + movie_id
                 + "/Ratings,"
             )
-            return Response(status_code = response.status_code, content = response.json()['results'], errorMessage = response.json()['errorMessage'])
+            return Response(status_code = response.status_code, content = response.json(), errorMessage = response.json()['errorMessage'])
 
     # Search for movies only
     @classmethod
