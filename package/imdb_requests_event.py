@@ -23,7 +23,7 @@ class IMDBRequest:
                 + "/" 
                 + movie_id
                 )
-            return Response(status_code = response.status_code, content = response.json())
+            return Response(status_code = response.status_code, content = response.json(), errorMessage = response.json()['errorMessage'])
 
     # Search lots of informations for a specific id
     @classmethod
@@ -33,7 +33,7 @@ class IMDBRequest:
             f = open('./package/local_jsons/requests_basic/Advanced_search.json', "r")
             response = json.load(f)
             f.close()
-            return Response(status_code = "json loaded", content = response)
+            return Response(status_code = "json loaded", content = response, errorMessage = "")
         else:
             response =  requests.get(
                 cls._base_url
@@ -43,7 +43,7 @@ class IMDBRequest:
                 + movie_id
                 + "/Ratings,"
             )
-            return Response(status_code = response.status_code, content = response.json()['results'])
+            return Response(status_code = response.status_code, content = response.json()['results'], errorMessage = response.json()['errorMessage'])
 
     # Search for movies only
     @classmethod
@@ -55,7 +55,7 @@ class IMDBRequest:
                 + "/"
                 + movie
             )
-            return Response(status_code = response.status_code, content = response.json()['results'])
+            return Response(status_code = response.status_code, content = response.json()['results'], errorMessage = response.json()['errorMessage'])
 
     # Search for series only    
     @classmethod
@@ -67,7 +67,7 @@ class IMDBRequest:
                 + "/"
                 + serie
             )
-            return Response(status_code = response.status_code, content = response.json()['results'])
+            return Response(status_code = response.status_code, content = response.json()['results'], errorMessage = response.json()['errorMessage'])
 
     # Search for main result for a search (Main titles, actores, company, keywords...)
     @classmethod
@@ -79,4 +79,4 @@ class IMDBRequest:
                 + "/"
                 + serie
             )
-            return Response(status_code = response.status_code, content = response.json()['results'])
+            return Response(status_code = response.status_code, content = response.json()['results'], errorMessage = response.json()['errorMessage'])

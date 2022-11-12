@@ -1,8 +1,7 @@
 class SearchMoviesEvent:
 
-    def __init__(self, id, image, title, description, errorMessage):
+    def __init__(self, id, image, title, description):
         self.id = id
         self.image = image
         self.title = title
         self.description = description
-        self.errorMessage = errorMessage
