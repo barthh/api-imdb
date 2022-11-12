@@ -25,7 +25,7 @@ def home_post(key = None):
 @search_app.route('/search_movie/')
 @search_app.route('/search_movie/<key>')
 def movie_list(key = None):
-    print("movie_list")
+    print("search_movies")
     if not key:
         return render_template('search_results.html', message = "Please type something to search")
         
@@ -40,12 +40,11 @@ def movie_list(key = None):
 @search_app.route('/search_serie/')
 @search_app.route('/search_serie/<key>')
 def serie_list(key = None):
-    print("serie_list")
+    print("search_series")
     if not key:
         return render_template('search_results.html', message = "Please type something to search")
         
     results = VersioningEventFacade.search_series(key)
-    print(results[0].id)
 
     if not results:
         return render_template('search_results.html', message = "No series matches your search", search = key)
