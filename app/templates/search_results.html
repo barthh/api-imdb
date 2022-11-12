@@ -4,7 +4,9 @@
 
   <link href = "{{ url_for('static', filename = 'css/search_results.css') }}" rel = "stylesheet">
 
-  <div class = "search_message">Results for « {{ search }} »</div>
+  {% if search %}
+    <div class = "search_message">Results for « {{ search }} »</div>
+  {% endif %}
     {% if not message %}
 
       <div class = "elements">
