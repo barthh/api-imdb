@@ -3,20 +3,26 @@
 {% block container2 %}
 
   <link href = "{{ url_for('static', filename = 'css/search_results.css') }}" rel = "stylesheet">
-    {% for movie in movies %}
+
+  <div class = "search_message">Results for « {{ search }} »</div>
+    {% if not message %}
+
       <div class = "elements">
-        <h2>
-          <a class = "title" href = "{{ url_for('information.information', key = movie.id) }}">{{ movie.title }}</a>          
-          <small>{{ movie.description }}</small>
-        </h2>
+        {% for result in results %}
+        <div class= "sub_elements {{'odd' if(loop.index)%2 == 0 }}" >
+          <img src="{{ result.image }}">
+          <a class = "title" href = "{{ url_for('information.information', key = result.id) }}">{{ result.title }}</a>          
+          <small>{{ result.description }}</small>
+        </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-    {% if message %}
-      <div class = "elements">
-        <p class = "messages">
-          {{ message }}
-        </p>
-      </div>
+
+    {% else %}
+    <div class = "elements">
+      <p class = "messages">
+      {{ message }}
+      </p>
+    </div>
     {% endif %}
 
 {% endblock %}
