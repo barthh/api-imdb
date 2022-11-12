@@ -21,4 +21,4 @@ else:
     print("error")
 
 
-from app import error_handlers
+from app.views import error_handlers

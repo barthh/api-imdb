@@ -56,6 +56,7 @@ class VersioningEventFacade:
             stars = event["stars"],
             keywords = event["keywords"],
             similars = event["similars"],
+            errorMessage = event["errorMessage"],
             )
         return versioning_event
     
@@ -70,20 +71,20 @@ class VersioningEventFacade:
         Onput:
         - A list of objects. 
         """
-        events = IMDBRequest.search_movies(research).content
+        events = IMDBRequest.search_movies(research)
 
-        if not events:
-            return None 
-            
         versioning_events = []
-        for event in events:
-            versioning_event = SearchMoviesEvent(
-                id = event['id'],
-                image = event['image'],
-                title = event['title'],
-                description = event['description'],
-                )
-            versioning_events.append(versioning_event)
+
+        if events.content:
+            for event in events.content:
+                versioning_event = SearchMoviesEvent(
+                    id = event['id'],
+                    image = event['image'],
+                    title = event['title'],
+                    description = event['description'],
+                    )
+                versioning_events.append(versioning_event)
+
         return versioning_events
 
 
@@ -109,9 +110,10 @@ class VersioningEventFacade:
                 image = event['image'],
                 title = event['title'],
                 description = event['description'],
+                errorMessage = event['errorMessage'],
                 )
             versioning_events.append(versioning_event)
-        return versioning_events
+        return events.errorMessage, versioning_events
     
     @staticmethod
     def search_all(research:str) -> [SearchAllEvent]:
@@ -136,6 +138,7 @@ class VersioningEventFacade:
                 image = event['image'],
                 title = event['title'],
                 description = event['description'],
+                errorMessage = event['errorMessage'],
                 )
             versioning_events.append(versioning_event)
         return versioning_events

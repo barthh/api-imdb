@@ -26,6 +26,6 @@ def movie_list(key = None):
     results = VersioningEventFacade.search_movies(key)
 
     if not results:
-        return render_template('search_results.html', message = "No movies matches your search")
+        return render_template('search_results.html', message = "No movies matches your search", search = key)
 
     return render_template('search_results.html', results = results, search = key)
