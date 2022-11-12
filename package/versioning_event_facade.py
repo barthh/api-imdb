@@ -43,9 +43,19 @@ class VersioningEventFacade:
 
         versioning_event = AdvancedEvent(
             title = event["title"],
-            fullTitle = event["fullTitle"],
-            rating = event["imDb"],
-            errorMessage = event["errorMessage"],
+            year = event["year"],
+            image = event["image"],
+            releaseDate = event["releaseDate"],
+            time = event["runtimeStr"],
+            plot = event["plot"],
+            genres = event["genres"],
+            ratings = event["ratings"],
+            boxOffice = event["boxOffice"],
+            directors = event["directors"],
+            writers = event["writers"],
+            stars = event["stars"],
+            keywords = event["keywords"],
+            similars = event["similars"],
             )
         return versioning_event
     
