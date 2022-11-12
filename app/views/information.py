@@ -11,7 +11,7 @@ information_app = Blueprint('information', __name__)
 def information(key = None):
     if not key:
         abort(404)
-    movie = VersioningEventFacade.title_ratings(key)
+    movie = VersioningEventFacade.title_advanced(key)
     if movie.errorMessage:
         return render_template('information.html', message = "Title not found")
     return render_template('information.html', movie = movie)
