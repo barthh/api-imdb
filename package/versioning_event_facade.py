@@ -56,6 +56,7 @@ class VersioningEventFacade:
             stars = event["stars"],
             keywords = event["keywords"],
             similars = event["similars"],
+            errorMessage = event["errorMessage"],
             )
         return versioning_event
     
@@ -82,6 +83,7 @@ class VersioningEventFacade:
                 image = event['image'],
                 title = event['title'],
                 description = event['description'],
+                errorMessage = event['errorMessage'],
                 )
             versioning_events.append(versioning_event)
         return versioning_events
@@ -109,6 +111,7 @@ class VersioningEventFacade:
                 image = event['image'],
                 title = event['title'],
                 description = event['description'],
+                errorMessage = event['errorMessage'],
                 )
             versioning_events.append(versioning_event)
         return versioning_events
@@ -136,6 +139,7 @@ class VersioningEventFacade:
                 image = event['image'],
                 title = event['title'],
                 description = event['description'],
+                errorMessage = event['errorMessage'],
                 )
             versioning_events.append(versioning_event)
         return versioning_events
