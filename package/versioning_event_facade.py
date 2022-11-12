@@ -98,7 +98,7 @@ class VersioningEventFacade:
         Onput:
         - A list of objects. 
         """
-        events = IMDBRequest.search_movies(research).content
+        events = IMDBRequest.search_series(research).content
 
         if not events:
             return None 
@@ -109,11 +109,10 @@ class VersioningEventFacade:
                 id = event['id'],
                 image = event['image'],
                 title = event['title'],
-                description = event['description'],
-                errorMessage = event['errorMessage'],
+                description = event['description']
                 )
             versioning_events.append(versioning_event)
-        return events.errorMessage, versioning_events
+        return versioning_events
     
     @staticmethod
     def search_all(research:str) -> [SearchAllEvent]:

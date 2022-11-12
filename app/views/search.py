@@ -12,19 +12,20 @@ search_app = Blueprint('search', __name__)
 @search_app.route('/home', methods = ['POST'])
 @search_app.route('/search/', methods = ['POST'])
 @search_app.route('/search/<key>', methods = ['POST'])
-def home_post(key = None):
-    print(request.form["submit"])
-    if request.form["submit"] == "submit_movie":
+def home_post(key = None):    
+    if request.form["submit"] == "Submit movie":
         input_text = request.form['movie_title']
-    elif request.form["submit"] == "submit_serie":
+        input_method = "search.movie_list"
+    elif request.form["submit"] == "Submit serie":
         input_text = request.form['serie_title']
-
-    return redirect(url_for('search.movie_list', key = input_text))
+        input_method = "search.serie_list"
+    return redirect(url_for(input_method, key = input_text))
 
 # Find movie page - display all movies found
-@search_app.route('/search/')
-@search_app.route('/search/<key>')
+@search_app.route('/search_movie/')
+@search_app.route('/search_movie/<key>')
 def movie_list(key = None):
+    print("movie_list")
     if not key:
         return render_template('search_results.html', message = "Please type something to search")
         
@@ -34,3 +35,20 @@ def movie_list(key = None):
         return render_template('search_results.html', message = "No movies matches your search", search = key)
 
     return render_template('search_results.html', results = results, search = key)
+
+# Find movie page - display all movies found
+@search_app.route('/search_serie/')
+@search_app.route('/search_serie/<key>')
+def serie_list(key = None):
+    print("serie_list")
+    if not key:
+        return render_template('search_results.html', message = "Please type something to search")
+        
+    results = VersioningEventFacade.search_series(key)
+    print(results[0].id)
+
+    if not results:
+        return render_template('search_results.html', message = "No series matches your search", search = key)
+
+    return render_template('search_results.html', results = results, search = key)
+    
