@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %} Page not found {% endblock %}
-
-{% block main %}
-
-<div class="container">
-    <h1>Page not found</h1>
-</div>
-  
+{% block container %}
+        <h1>{% block title %} API Key Error {% endblock %}</h1>
+        <p>OOPS! Something went wrong with your API Key.</p>
+        <p>Check if you have not reached your daily limit or if you have paste it incorrectly.</p>
+        <p>Don't forget to restart the application.</p>
 {% endblock %}

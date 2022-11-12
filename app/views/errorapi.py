@@ -7,4 +7,4 @@ errorapi_app = Blueprint('home', __name__)
 @errorapi_app.route('/')
 @errorapi_app.route('/home')
 def home():
-    return render_template('errorApiKey.html')
+    return render_template("errorApiKey.html")

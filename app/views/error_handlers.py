@@ -9,4 +9,4 @@ def page_not_found(error):
 @app.errorhandler(500)
 def page_not_found(e):
     print(e)
-    return render_template("error500.html")
+    return render_template("error500.html"), 500
