@@ -2,18 +2,32 @@
 
 {% block container %}
 
-<link href = "{{ url_for('static', filename = 'css/search_bar.css') }}" rel = "stylesheet">
+<h2>{% block Maintitle %} Welcome to IMDb API {% endblock %}</h2>
 
-<div class = "elements padding">
-  <form method = "POST">
-    <input type = "text" name = "movie_title" placeholder = "Search a movie...">
-    <input type = "submit" value = "Find">
-  </form>
-</div>
-
-<div>
   {% block container2 %}
+  <h2>{% block title1 %} Search Movies {% endblock %}</h2>
+  <link href = "{{ url_for('static', filename = 'css/search_bar.css') }}" rel = "stylesheet">
+
+  <div class = "elements padding">
+    <form method = "POST">
+      <input type = "text" name = "movie_title" placeholder = "Search a movie...">
+      <input type = "submit" name="submit" value = "submit_movie">
+    </form>
+  </div>
+  {% endblock %}
+  
+
+  {% block container3 %}
+  <h2>{% block title2%} Search Series {% endblock %}</h2>
+  <link href = "{{ url_for('static', filename = 'css/search_bar.css') }}" rel = "stylesheet">
+
+  <div class = "elements padding">
+    <form method = "POST">
+      <input type = "text" name = "serie_title" placeholder = "Search a serie...">
+      <input type = "submit" name="submit" value = "submit_serie">
+    </form>
+  </div>
   {% endblock %}  
-</div>
+
 
 {% endblock %}

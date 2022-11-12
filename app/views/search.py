@@ -13,7 +13,12 @@ search_app = Blueprint('search', __name__)
 @search_app.route('/search/', methods = ['POST'])
 @search_app.route('/search/<key>', methods = ['POST'])
 def home_post(key = None):
-    input_text = request.form['movie_title']   
+    print(request.form["submit"])
+    if request.form["submit"] == "submit_movie":
+        input_text = request.form['movie_title']
+    elif request.form["submit"] == "submit_serie":
+        input_text = request.form['serie_title']
+
     return redirect(url_for('search.movie_list', key = input_text))
 
 # Find movie page - display all movies found
