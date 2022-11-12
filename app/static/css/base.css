@@ -7,15 +7,21 @@ body {
   background-color: #222;
   min-height: 50px;
 }
-div.navbar_link a {
+
+div.navbar_link {
+  margin-left: 40px;
+}
+div.navbar a {
   color: #999;
 }
-div.navbar_link a:hover {
+
+div.navbar a:hover {
   color: white;
 }
-.navbar_link {
+
+.link {
   float: left;
-  padding: 14px 70px;
+  padding: 14px 15px;
   font-size: 20px;
 }
 
@@ -54,4 +60,8 @@ div.elements .messages {
   color: #152b3f;
   font-size: 25px;
   text-decoration: none;
+}
+
+.space {
+  margin-top: 50px;
 }

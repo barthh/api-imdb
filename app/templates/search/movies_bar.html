@@ -1,0 +1,22 @@
+<!-- Allow us to hide the menu  -->
+{% if not menu %}
+  {% extends 'base.html' %}
+{% endif %}
+
+{% block container %}
+
+  <h2>{% block title1 %} Search Movies {% endblock %}</h2>
+  <link href = "{{ url_for('static', filename = 'css/search_bar.css') }}" rel = "stylesheet">
+
+  <div class = "elements padding">
+    <form method = "POST">
+      <input type = "text" name = "movie_title" placeholder = "Search a movie...">
+      <input type = "submit" name="submit" value = "Find movies">
+    </form>
+  </div>
+
+  <div class = "results">
+    {% block container2 %}{% endblock %}
+  </div>
+
+{% endblock %}

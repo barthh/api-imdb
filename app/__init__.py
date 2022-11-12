@@ -1,7 +1,6 @@
 from flask import Flask
-from .views import *
-from flask import render_template, request
 from package import imdb_requests_event
+from .views import *
 
 app = Flask(__name__)
 
@@ -13,11 +12,11 @@ def activate_job():
 if (activate_job() == ""):
     app.register_blueprint(home_app)
     app.register_blueprint(information_app)
-    app.register_blueprint(search_app)
+    app.register_blueprint(search_series_app)
+    app.register_blueprint(search_movies_app)
     print("Success")
 else:
     app.register_blueprint(errorapi_app)
     print("Problem API key")
 
-
-from app.views import error_handlers
+from .views import error_handlers

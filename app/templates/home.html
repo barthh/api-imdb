@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block container %}
+
+<div class="elements padding">
+  <div class = "title">
+      {% block Maintitle %} Welcome to IMDb API {% endblock %}
+  </div>
+</div>
+  
+<div class = "space">
+  {% include 'search/movies_bar.html' %}
+</div>
+<div class = "space">
+  {% include 'search/series_bar.html' %}
+</div>
+
+{% endblock %}
