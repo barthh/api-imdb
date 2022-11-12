@@ -8,3 +8,10 @@ home_app = Blueprint('home', __name__)
 @home_app.route('/home')
 def home():
     return render_template('search_bar.html')
+
+from flask import render_template,request
+
+
+def page_not_found(e):
+    print(e)
+    return render_template("error.html")
