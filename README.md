@@ -40,18 +40,18 @@ This application allows you to find general information (duration, genre, main a
 The data comes from the [IMDb API website](https://imdb-api.com). The project is built with [python 3.9](https://docs.python.org/3.9/) and the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/).
 
 
-<p align="center">
-  <img src="./images/search_a_movie.png" height="220px" />
-  <img src="./images/movie_informations.png" height="220px" /> 
+<p align="center" style="width: 100%; display: flex; justify-content: space-between;">
+  <img src="./images/search_a_movie.png" style="width: 40%; margin-left: 7%; height:auto;" />
+  <img src="./images/movie_informations.png" style="width: 40%; margin-right: 7%; height:auto;" /> 
 </p>
 
 ### Video presentation
 
 _Here is a video to explain better the app : [link](https://www.youtube.com/watch?v=T_LxS2t20UI)_
 
-<p align="center">
+<p align="center" style="width: 100%;">
   <a href="https://www.youtube.com/watch?v=T_LxS2t20UI">
-    <img src="https://img.youtube.com/vi/T_LxS2t20UI/maxresdefault.jpg" height="220px" />
+    <img src="https://img.youtube.com/vi/T_LxS2t20UI/maxresdefault.jpg" height="220px" style="width: 40%; height:auto;"/>
   </a>
 </p>
 
