@@ -11,6 +11,8 @@ class IMDBRequest:
     load_dotenv()
     _token = os.getenv("API_token")
     _base_url = "https://imdb-api.com/en/API/"
+
+    # Use local json
     _local_mode = False
 
     def _get_local_json(json_name):

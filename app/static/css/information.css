@@ -1,10 +1,74 @@
-.title {
-    margin-bottom: 15px;
+#first_part {
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #428bca;
 }
-.inline {
+
+#cover {
+    width: 20%;
     display: inline-block;
-    font-size: 20px;
 }
-#rating {
-    color: #295b87;
+
+#cover img {
+    width: 100%;
+}
+
+#movie_informations {
+    width: 80%;
+}
+
+.line_info {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.line {
+    width: 100%;
+    height: 0;
+    border: 1px solid #3f7fb7;
+    margin: 3px;
+    display:inline-block;
+  }
+
+/* Ratings */
+
+#rating-part {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: #428bca;
+}
+
+#rating-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+#ratings {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+#ratings span {
+    color: #428bca;
+}
+
+.rating {
+    margin-right: 60px;
+    text-align: center;
+}
+
+.rating-source {
+    margin-bottom: 10px;
+    color: #428bca;
+    font-size: 20px;
 }
