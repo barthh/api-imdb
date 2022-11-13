@@ -1,6 +1,8 @@
 
 # Find Movie Ratings App
 
+<a id="readme-top"></a>  
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Dimitri][linkedin-dimitri-shield]][linkedin-dimitri-url]
 [![Barth][linkedin-barthh-shield]][linkedin-barthh-url]
