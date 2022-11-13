@@ -47,7 +47,7 @@ The data comes from the [IMDb API website](https://imdb-api.com). The project is
 
 ### Video presentation
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://www.youtube.com/watch?v=T_LxS2t20UI)
+[![Watch the video](https://img.youtube.com/vi/T_LxS2t20UI/maxresdefault.jpg)](https://www.youtube.com/watch?v=T_LxS2t20UI)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
