@@ -15,6 +15,7 @@ This application is a school project used to learn how to retrieve data from an 
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#video-presentation">Video presentation</a></li>
         <li><a href="#content">Content</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -24,10 +25,11 @@ This application is a school project used to learn how to retrieve data from an 
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#run-tests">Run tests</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-
+    <li><a href="#future-features">Future features</a></li>
   </ul>
 </details>
 
@@ -116,20 +118,15 @@ _Below are the instructions_
     ```
 3. Navigate to http://127.0.0.1:5000/ in your browser
 
-### Run manual test
+### Run tests
 
 A test on your API Key is done when you start the application.
 To test manually the application you can do as follow :
 
- 1. Navigate to the test folder
-    ```sh
-    cd api-imdb/tests
-    ```
-
- 2. Run pytest :
-    ```python
-    pytest
-    ```
+Use pytests command :
+```python
+pipenv run pytest
+```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -153,14 +150,10 @@ Here are some additional features:
 - If the movie/series has no information, the user will be notified.
 - If the movie/series does not have a cover image, a template image is displayed
 
-To execute package tests :
-```python
-pipenv run pytest
-```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Future ameliorations
+## Future features
 
 _Here are the possible improvements_
 
