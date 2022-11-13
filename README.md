@@ -49,6 +49,8 @@ The data comes from the [IMDb API website](https://imdb-api.com). The project is
   <img src="./images/movie_informations.png" style="width: 40%; margin-right: 7%; height:auto;" /> 
 </p>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Video presentation
 
 _Here is a video to explain better the app : [link](https://www.youtube.com/watch?v=T_LxS2t20UI)_
@@ -119,6 +121,8 @@ _Below are the instructions_
     python3 app.py
     ```
 3. Navigate to http://127.0.0.1:5000/ in your browser
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Run tests
 
