@@ -148,8 +148,15 @@ Here are some additional features:
 - If the movie/series has no information, the user will be notified.
 - If the movie/series does not have a cover image, a template image is displayed
 
+To execute package tests :
+```python
+pipenv run pytest
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Future
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
