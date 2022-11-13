@@ -6,7 +6,7 @@
 [![Dimitri][linkedin-dimitri-shield]][linkedin-dimitri-url]
 [![Barth][linkedin-barthh-shield]][linkedin-barthh-url]
 
-This application is a school project to learn how to retrieve data from an API, exploit it and make versioning code.
+This application is a school project used to learn how to retrieve data from an API, exploit it and make versioning code. We tried to go further by implementing a website UI to make it more accesible for the user.
 
 <!-- TABLE OF CONTENTS -->
 <details open>
@@ -36,7 +36,8 @@ This application is a school project to learn how to retrieve data from an API, 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This application allows you to find general information (duration, genre, main actors...) about a movie or a serie as well as taking the rating from several website, allowing the user to access it easily as compared to go from one website to the other. The data comes from the [IMDb API website](https://imdb-api.com). The project is built with [python 3.9](https://docs.python.org/3.9/) and the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/).
+This application allows you to find general information (duration, genre, main actors...) about a movie or a serie as well as taking the rating from several website, allowing the user to access it easily as compared to go from one website to the other. 
+The data comes from the [IMDb API website](https://imdb-api.com). The project is built with [python 3.9](https://docs.python.org/3.9/) and the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/).
 
 
 <p align="center">
