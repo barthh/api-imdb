@@ -2,123 +2,131 @@
 
 {% block container %}
 
-<link href = "{{ url_for('static', filename = 'css/information.css') }}" rel = "stylesheet">
-<link href = "{{ url_for('static', filename = 'css/circles.css') }}" rel = "stylesheet">
-  
-  <div class = "elements padding">
     
-    <div id = "first_part">
-
-      <div id = "cover">
-        {% if movie.image %}
-          <img src="{{ movie.image }}">
-        {% endif %}
-      </div>
-
-      <div id = "movie_informations">
-        <div class = "line_info">
-          {% if movie.releaseDateFormatted %}
-            {{ movie.releaseDateFormatted }} /
-          {% endif %}
-
-          {% if movie.time %}
-            {{ movie.time }} /
-          {% endif %}
-
-          {% if movie.genres %}
-            {{ movie.genres }}
-          {% endif %}
-        </div>
-
-        {% if movie.directors %}
-          <div class = "line_info">From {{ movie.directors }}</div>
-        {% endif %}
-
-        {% if movie.writers %}
-        <div class = "line_info">By {{ movie.writers }}</div>
-        {% endif %}
-        
-        {% if movie.stars %}
-        <div class = "line_info">With {{ movie.stars }}</div>
-        {% endif %}
-      </div>
-
+  <link href = "{{ url_for('static', filename = 'css/information.css') }}" rel = "stylesheet">
+  <link href = "{{ url_for('static', filename = 'css/circles.css') }}" rel = "stylesheet">
+    
+  {% if message %}
+    <div class = "elements">
+      <p class = "messages">
+      {{ message }}
+      </p>
     </div>
-    
-    <div class="line"></div>
-
-    <div id = "rating-part">
-      <div id="rating-title">Ratings</div>
+  {% else %}
+    <div class = "elements padding">
       
-      {% if movie.ratings['imDb'] %}
-      <div id = "ratings">
-        <div class="rating">
-          <div class="rating-source">imDb</div>
-          <div class="c100 p{{ movie.ratingsPurcentage['imDb']}} center">
-            <span>{{ movie.ratings['imDb']}}</span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-            </div>
-          </div>
-        </div>
-        {% endif %}
+      <div id = "first_part">
 
-        {% if movie.ratings['metacritic'] %}
-        <div class="rating">
-          <div class="rating-source">metacritic</div>
-          <div class="c100 p{{ movie.ratingsPurcentage['metacritic']}} center">
-            <span>{{ movie.ratings['metacritic']}}%</span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-            </div>
-          </div>
+        <div id = "cover">
+          {% if movie.image %}
+            <img src="{{ movie.image }}">
+          {% endif %}
         </div>
-        {% endif %}
 
-        {% if movie.ratings['theMovieDb'] %}
-        <div class="rating">
-          <div class="rating-source">theMovieDb</div>
-          <div class="c100 p{{ movie.ratingsPurcentage['theMovieDb']}} center">
-            <span>{{ movie.ratings['theMovieDb']}}</span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-            </div>
-          </div>
-        </div>
-        {% endif %}
+        <div id = "movie_informations">
+          <div class = "line_info">
+            {% if movie.releaseDateFormatted %}
+              {{ movie.releaseDateFormatted }} /
+            {% endif %}
 
-        {% if movie.ratings['rottenTomatoes'] %}
-        <div class="rating">
-          <div class="rating-source">rottenTomatoes</div>
-          <div class="c100 p{{ movie.ratingsPurcentage['rottenTomatoes']}} center">
-            <span>{{ movie.ratings['rottenTomatoes']}}%</span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-            </div>
+            {% if movie.time %}
+              {{ movie.time }} /
+            {% endif %}
+
+            {% if movie.genres %}
+              {{ movie.genres }}
+            {% endif %}
           </div>
+
+          {% if movie.directors %}
+            <div class = "line_info">From {{ movie.directors }}</div>
+          {% endif %}
+
+          {% if movie.writers %}
+          <div class = "line_info">By {{ movie.writers }}</div>
+          {% endif %}
+          
+          {% if movie.stars %}
+          <div class = "line_info">With {{ movie.stars }}</div>
+          {% endif %}
         </div>
-        {% endif %}
-        
-        {% if movie.ratings['filmAffinity'] %}
-        <div class="rating">
-          <div class="rating-source">filmAffinity</div>
-          <div class="c100 p{{ movie.ratingsPurcentage['filmAffinity']}} center">
-            <span>{{ movie.ratings['filmAffinity']}}</span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-            </div>
-          </div>
-        </div>
-        {% endif %}
-        
+
       </div>
+      
+      <div class="line"></div>
+
+      <div id = "rating-part">
+        <div id="rating-title">Ratings</div>
+        
+        {% if movie.ratings['imDb'] %}
+        <div id = "ratings">
+          <div class="rating">
+            <div class="rating-source">imDb</div>
+            <div class="c100 p{{ movie.ratingsPurcentage['imDb']}} center">
+              <span>{{ movie.ratings['imDb']}}</span>
+              <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if movie.ratings['metacritic'] %}
+          <div class="rating">
+            <div class="rating-source">metacritic</div>
+            <div class="c100 p{{ movie.ratingsPurcentage['metacritic']}} center">
+              <span>{{ movie.ratings['metacritic']}}%</span>
+              <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if movie.ratings['theMovieDb'] %}
+          <div class="rating">
+            <div class="rating-source">theMovieDb</div>
+            <div class="c100 p{{ movie.ratingsPurcentage['theMovieDb']}} center">
+              <span>{{ movie.ratings['theMovieDb']}}</span>
+              <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if movie.ratings['rottenTomatoes'] %}
+          <div class="rating">
+            <div class="rating-source">rottenTomatoes</div>
+            <div class="c100 p{{ movie.ratingsPurcentage['rottenTomatoes']}} center">
+              <span>{{ movie.ratings['rottenTomatoes']}}%</span>
+              <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          
+          {% if movie.ratings['filmAffinity'] %}
+          <div class="rating">
+            <div class="rating-source">filmAffinity</div>
+            <div class="c100 p{{ movie.ratingsPurcentage['filmAffinity']}} center">
+              <span>{{ movie.ratings['filmAffinity']}}</span>
+              <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          
+        </div>
+      </div>
+
     </div>
-
-  </div>
-
+  {% endif %}
 {% endblock %}
