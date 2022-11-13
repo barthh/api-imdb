@@ -47,8 +47,13 @@ The data comes from the [IMDb API website](https://imdb-api.com). The project is
 
 ### Video presentation
 
-[![Watch the video](https://img.youtube.com/vi/T_LxS2t20UI/maxresdefault.jpg)](https://www.youtube.com/watch?v=T_LxS2t20UI)
+_Here is a video to explain better the app : [link](https://www.youtube.com/watch?v=T_LxS2t20UI)_
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=T_LxS2t20UI">
+    <img src="https://img.youtube.com/vi/T_LxS2t20UI/maxresdefault.jpg" height="220px" />
+  </a>
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,8 +160,24 @@ pipenv run pytest
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Future
+## Future ameliorations
 
+_Here are the possible improvements_
+
+- Add tests for the app
+- Add a makefile to launch easily the project
+
+Integrate new features into the package :
+- Find the most relevant keywords of a search. (Suggests words when the user is doing a search)
+- Possibility to search for an actor/writer/director.
+- Get information related to an actor/writer/director
+- Add a top of titles by year, genre, type...
+
+Integrate the application features already available in the package :
+- Do a general search that provides titles (movies, series,...), people (writers, actors,...) and similar words to the search
+- Below the film or series information, suggest similar titles
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
