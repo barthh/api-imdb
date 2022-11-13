@@ -1,9 +1,10 @@
+# Import requests event
 from .imdb_requests_event import IMDBRequest
 
+# Import versioning facade events
 from .imdb_search_movies import SearchMoviesEvent
 from .imdb_search_series import SearchSeriesEvent
 from .imdb_search_all import SearchAllEvent
-
 from .imdb_info_advanced import AdvancedEvent
 from .imdb_info_ratings import RatingsEvent
 
@@ -50,7 +51,6 @@ class VersioningEventFacade:
             plot = event["plot"],
             genres = event["genres"],
             ratings = event["ratings"],
-            boxOffice = event["boxOffice"],
             directors = event["directors"],
             writers = event["writers"],
             stars = event["stars"],
@@ -99,11 +99,9 @@ class VersioningEventFacade:
         - A list of objects. 
         """
         events = IMDBRequest.search_series(research).content
-
-        if not events:
-            return None 
             
         versioning_events = []
+
         for event in events:
             versioning_event = SearchSeriesEvent(
                 id = event['id'],
@@ -112,8 +110,10 @@ class VersioningEventFacade:
                 description = event['description']
                 )
             versioning_events.append(versioning_event)
+
         return versioning_events
     
+
     @staticmethod
     def search_all(research:str) -> [SearchAllEvent]:
         """Search into all items (Movies, Series TVs, TV Episodes, Names, Companies, Keywords and more).
@@ -125,11 +125,9 @@ class VersioningEventFacade:
         - A list of objects. 
         """
         events = IMDBRequest.search_all(research).content
-
-        if not events:
-            return None 
             
         versioning_events = []
+
         for event in events:
             versioning_event = SearchAllEvent(
                 id = event['id'],
@@ -140,4 +138,5 @@ class VersioningEventFacade:
                 errorMessage = event['errorMessage'],
                 )
             versioning_events.append(versioning_event)
+            
         return versioning_events
