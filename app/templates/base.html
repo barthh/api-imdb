@@ -10,8 +10,10 @@
     <div class = "navbar">
       <div class = "navbar_link">
         <a class = "link" href = "{{ url_for('home.home') }}" style = "text-decoration:none">Menu</a>
-        <a class = "link" href = "{{ url_for('search_movies.menu') }}" style = "text-decoration:none">Movie</a>
-        <a class = "link" href = "{{ url_for('search_series.menu') }}" style = "text-decoration:none">Serie</a>
+        {% if not error %}
+          <a class = "link" href = "{{ url_for('search_movies.menu') }}" style = "text-decoration:none">Movie</a>
+          <a class = "link" href = "{{ url_for('search_series.menu') }}" style = "text-decoration:none">Serie</a>
+        {% endif %}
       </div>
     </div>
   
