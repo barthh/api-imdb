@@ -5,16 +5,32 @@
 [![Dimitri][linkedin-dimitri-shield]][linkedin-dimitri-url]
 [![Barth][linkedin-barthh-shield]][linkedin-barthh-url]
 
-This app is a school project to learn how to retrieve data from an api, exploit it and make versioning code
+This app is a school project to learn how to retrieve data from an api, exploit it and make versioning code 
 
-- [Find Movie Ratings App](#find-movie-ratings-app)
-  - [About The Project](#about-the-project)
-  - [Content](#content)
-    - [Built With](#built-with)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Usage](#usage)
+<!-- TABLE OF CONTENTS -->
+<details open>
+  <summary>Table of Contents</summary>
+  <ul>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+
+  </ul>
+</details>
+
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -29,7 +45,7 @@ Here is an overview :
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Content
+### Content
 
 Usefull content table :
 
