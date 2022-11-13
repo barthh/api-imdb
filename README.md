@@ -73,7 +73,7 @@ Usefull content table :
 
 ### Prerequisites
 
-You need at [python 3.9](https://docs.python.org/3.9/) to run this project.
+You need [python 3.9](https://docs.python.org/3.9/) to run this project.
 
 ### Installation
 
@@ -100,6 +100,10 @@ _Below are the instructions_
     ```python
     pipenv run python3 app.py
     ```
+    or simply
+    ```python
+    python3 app.py
+    ```
 3. Navigate to http://127.0.0.1:5000/ in your browser
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,19 +112,19 @@ _Below are the instructions_
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-You can search for a movie or a serie using the search bar in the home menu.
-You will be redirected to a list of movies/series that best match your search.
+You can search for a movie or a series using the search bar in the home menu.
+You will be redirected to a list of movies/series that best matches your search.
 Select the one from which you require more information.
-You will be taken to a page that contains information about the selected movie/serie.
-In the navigation bar you can go back to the main menu or use the movie/serie search.
+You will be taken to a page that contains information about the selected movie/series.
+In the navigation bar you can go back to the main menu or use the movie/series search.
 
 Here are some additional features:
 
 - If the user goes to a link not found (wrong path), a 404 error is displayed. 
-- If the user's key has reached its daily limit (100 uses) or is wrong, an error is displayed.
-- If no movie/serie was found, the user will be notified.
-- If the movie/serie has no information, the user will be notified.
-- If the movie/serie does not have a cover image, a template image is displayed
+- If the user's API key has reached its daily limit (100 uses) or is wrong, an error is displayed.
+- If no movie/series was found, the user will be notified.
+- If the movie/series has no information, the user will be notified.
+- If the movie/series does not have a cover image, a template image is displayed
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
