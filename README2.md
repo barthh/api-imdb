@@ -6,7 +6,7 @@
 [![Dimitri][linkedin-dimitri-shield]][linkedin-dimitri-url]
 [![Barth][linkedin-barthh-shield]][linkedin-barthh-url]
 
-This app is a school project to learn how to retrieve data from an api, exploit it and make versioning code 
+This application is a school project to learn how to retrieve data from an API, exploit it and make versioning code.
 
 <!-- TABLE OF CONTENTS -->
 <details open>
@@ -36,7 +36,7 @@ This app is a school project to learn how to retrieve data from an api, exploit 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This app allows you to find information about a movie as well as its notes. The data comes from the [IMDb API website](https://imdb-api.com). The project is built with [python 3.9](https://docs.python.org/3.9/) and the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/).
+This application allows you to find general information (duration, genre, main actors...) about a movie or a serie as well as taking the rating from several website, allowing the user to access it easily as compared to go from one website to the other. The data comes from the [IMDb API website](https://imdb-api.com). The project is built with [python 3.9](https://docs.python.org/3.9/) and the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/).
 
 
 <p align="center">
@@ -53,10 +53,10 @@ Usefull content table :
 
 | Template name | Description |
 | ------------- | ----------- |
-| [App folder](./app/) | The website app |
-| [Package folder](./package/) | Package to get the data from IMDb API |
-| [Tests folder](./tests/) | Some package tests |
-| [app.py](./app.py) |  The file to launch the app |
+| [App folder](./app/) | The website application |
+| [Package folder](./package/) | Packages to retrieve the data from IMDb API |
+| [Tests folder](./tests/) | Various tests |
+| [app.py](./app.py) |  The file used to launch the app |
 
 ### Built With
 
@@ -85,11 +85,11 @@ _Below are the instructions_
     ```
 1. Navigate over to [IMDb's API website](https://imdb-api.com), sign up and go to the profile section to get a API token.
   
-1. Put your API token in a ```.env``` file :
+1. Create an ```.env``` file and put your API token in a as follows :
     ```sh
     export API_token=thisismyAPItoken
     ```
-1. Create a virtual environment :
+1. (Optional) Create a virtual environment :
     ```python
     pipenv install
     ```
@@ -107,16 +107,16 @@ _Below are the instructions_
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-You can search for a movie or a series from the site menu.
+You can search for a movie or a serie using the search bar in the home menu.
 You will be redirected to a list of movies/series that best match your search.
-Select the one you want.
-You will be taken to a page that contains information about the selected movie/series.
-In the navigation bar you can go back to the main menu or in the movie search or the series search.
+Select the one from which you require more information.
+You will be taken to a page that contains information about the selected movie/serie.
+In the navigation bar you can go back to the main menu or use the movie/serie search.
 
 Here are some additional features:
 
-- If the user goes to a link not found, a 404 error is displayed. 
-- If the user's key has reached its daily limit (100 uses), an error is displayed.
+- If the user goes to a link not found (wrong path), a 404 error is displayed. 
+- If the user's key has reached its daily limit (100 uses) or is wrong, an error is displayed.
 - If no movie/serie was found, the user will be notified.
 - If the movie/serie has no information, the user will be notified.
 - If the movie/serie does not have a cover image, a template image is displayed
