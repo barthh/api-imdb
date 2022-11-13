@@ -8,6 +8,8 @@
 
 This application is a school project used to learn how to retrieve data from an API, exploit it and make versioning code. We tried to go further by implementing a website UI to make it more accesible for the user.
 
+Note for the teacher : [notes](./NOTE.md) 
+
 <!-- TABLE OF CONTENTS -->
 <details open>
   <summary>Table of Contents</summary>
