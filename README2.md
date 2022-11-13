@@ -39,8 +39,8 @@ This app allows you to find information about a movie as well as its notes. The 
 
 
 <p align="center">
-  <img src="./images/search_a_movie.png" height="100px" />
-  <img src="./images/movie_informations.png" height="100px" /> 
+  <img src="./images/search_a_movie.png" height="200px" />
+  <img src="./images/movie_informations.png" height="200px" /> 
 </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
