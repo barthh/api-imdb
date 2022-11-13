@@ -110,6 +110,23 @@ _Below are the instructions_
     python3 app.py
     ```
 3. Navigate to http://127.0.0.1:5000/ in your browser
+
+### Run manual test
+
+A test on your API Key is done when you start the application.
+To test manually the application you can do as follow :
+
+ 1. Navigate to the test folder
+    ```sh
+    cd api-imdb/tests
+    ```
+
+ 2. Run pytest :
+    ```python
+    pytest
+    ```
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
