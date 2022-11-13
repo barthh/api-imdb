@@ -38,9 +38,10 @@ This app is a school project to learn how to retrieve data from an api, exploit 
 This app allows you to find information about a movie as well as its notes. The data comes from the [IMDb API website](https://imdb-api.com). The project is built with [python 3.9](https://docs.python.org/3.9/) and the [Flask framework](https://flask.palletsprojects.com/en/2.2.x/).
 
 
-Here is an overview : 
-![[Search a Movie]](./images/search_a_movie.png)
-![[Search a Movie]](./images/movie_informations.png)
+<p align="center">
+  <img src="./images/search_a_movie.png" height="100px" />
+  <img src="./images/movie_informations.png" height="100px" /> 
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
