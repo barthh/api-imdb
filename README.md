@@ -130,11 +130,11 @@ NB : There are no tests for the app at this time.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-You can search for a movie or a series using the search bar in the home menu.
-You will be redirected to a list of movies/series that best matches your search.
-Select the one from which you require more information.
-You will be taken to a page that contains information about the selected movie/series.
-In the navigation bar you can go back to the main menu or use the movie/series search.
+* You can search for a movie or a series using the search bar in the home menu.
+* You will be redirected to a list of movies/series that best matches your search.
+* Select the one from which you require more information.
+* You will be taken to a page that contains information about the selected movie/series.
+* In the navigation bar you can go back to the main menu or use the movie/series search.
 
 Here are some additional features:
 
