@@ -153,7 +153,8 @@ _Here are the possible improvements_
 
 - Add tests for the app
 - Add a makefile to launch easily the project
-
+- Have only one search bar in the menu with a drop-down bar to choose the type of search
+  
 Integrate new features into the package :
 - Find the most relevant keywords of a search. (Suggests words when the user is doing a search)
 - Possibility to search for an actor/writer/director.
