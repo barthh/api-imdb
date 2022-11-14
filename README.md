@@ -49,8 +49,6 @@ The data comes from the [IMDb API website](https://imdb-api.com). The project is
   <img src="./images/movie_informations.png" style="width: 40%; margin-right: 7%; height:auto;" /> 
 </p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Video presentation
 
 _Here is a video to explain better the app : [link](https://www.youtube.com/watch?v=T_LxS2t20UI)_
@@ -60,9 +58,6 @@ _Here is a video to explain better the app : [link](https://www.youtube.com/watc
     <img src="https://img.youtube.com/vi/T_LxS2t20UI/maxresdefault.jpg" height="220px" style="width: 40%; height:auto;"/>
   </a>
 </p>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ### Content
 
@@ -111,18 +106,11 @@ _Below are the instructions_
     pipenv install
     ```
     > If you are missing the module, install it according to your system : [Get commands](https://pypi.org/project/pipenv/#installation)
-
-2. Run the app :
+1 Run the app :
     ```python
     pipenv run python3 app.py
     ```
-    or simply
-    ```python
-    python3 app.py
-    ```
-3. Navigate to http://127.0.0.1:5000/ in your browser
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Navigate to http://127.0.0.1:5000/ in your browser
 
 ### Run tests
 
