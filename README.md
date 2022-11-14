@@ -115,13 +115,13 @@ _Below are the instructions_
 ### Run tests
 
 A test on your API Key is done when you start the application.
-To test manually the application you can do as follow :
 
-Use pytests command :
+To test manually the package you can do as follow:
 ```python
 pipenv run pytest
 ```
 
+NB : There are no tests for the app at this time.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
