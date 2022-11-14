@@ -167,7 +167,8 @@ Integrate the application features already available in the package :
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+<!-- Introduction -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/barthh/api-imdb.svg?style=for-the-badge
 [contributors-url]: https://github.com/barthh/api-imdb/graphs/contributors
@@ -176,12 +177,11 @@ Integrate the application features already available in the package :
 [linkedin-dimitri-url]: https://www.linkedin.com/in/dimitri-prieur/
 
 [linkedin-barthh-shield]: https://img.shields.io/badge/-Barthelemy-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-barthh-url]: https://www.linkedin.com/in/https://www.linkedin.com/in/barthh/
+[linkedin-barthh-url]: https://www.linkedin.com/in/barthh/
 
+<!-- Build with -->
 [Flask]:https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=ffffff
 [Flask-url]:https://flask.palletsprojects.com/en/2.2.x/
 
-[Python]:https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=FFD43B
-[Python-url]:https://www.python.org/
-
-[product-screenshot]: images/screen1.png
+[Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=FFD43B
+[Python-url]: https://www.python.org/
