@@ -101,12 +101,12 @@ _Below are the instructions_
     ```sh
     export API_token=thisismyAPItoken
     ```
-1. (Optional) Create a virtual environment :
+2. Create a virtual environment :
     ```python
     pipenv install
     ```
     > If you are missing the module, install it according to your system : [Get commands](https://pypi.org/project/pipenv/#installation)
-1 Run the app :
+1. Run the app :
     ```python
     pipenv run python3 app.py
     ```
