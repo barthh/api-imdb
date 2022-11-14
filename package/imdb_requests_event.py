@@ -89,7 +89,7 @@ class IMDBRequest:
 
     # Search for main result for a search (Main titles, actores, company, keywords...)
     @classmethod
-    def search_all(cls, serie:str):
+    def search_all(cls, title:str):
         if(cls._local_mode):
             response = cls._get_local_json("search_all")
             return Response(status_code = "json loaded", content = response['results'], errorMessage = "")
@@ -99,6 +99,6 @@ class IMDBRequest:
                 + "SearchAll/"
                 + cls._token
                 + "/"
-                + serie
+                + title
             )
             return Response(status_code = response.status_code, content = response.json()['results'], errorMessage = response.json()['errorMessage'])
