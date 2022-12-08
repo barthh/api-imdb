@@ -90,7 +90,7 @@ _Below are the instructions_
 
 1. Clone the repository :
     ```
-    https://github.com/barthh/api-imdb.git
+    git clone https://github.com/barthh/api-imdb.git
     cd api-imdb
     ```
 1. Navigate over to [IMDb's API website](https://imdb-api.com), sign up and go to the profile section to get a API token.
